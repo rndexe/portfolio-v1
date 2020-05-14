@@ -3,5 +3,9 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(213, 126, 166);
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
