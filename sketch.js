@@ -8,9 +8,9 @@ function preload() {
 
 function setup() {
 
-  frameRate(6);
-  createCanvas(windowWidth, windowHeight);
-
+  frameRate(2);
+  let canvas = createCanvas(500,500);
+  canvas.parent('sketch');
   w = windowWidth;
   h = windowHeight;
   brblack = color(0, 43, 54);
@@ -37,10 +37,3 @@ function draw() {
   print(frameRate());
 }
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-  w = windowWidth;
-  h = windowHeight;
-  print(w);
-  print(h);
-}

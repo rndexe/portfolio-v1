@@ -1,13 +1,55 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+    <script src="sketch1.js"></script>
+    <script src="sketch2.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <script src="sketch.js"></script>
+    <div role="navigation" class="sidenav">
+      <a class="title" href="#">RND.EXE</a>
+      <button id="sketch1" >Sketch1</button>
+      <button id="sketch2" >Sketch2</button>
+      <button id="sketch3" >Sketch3</button>
+      <button id="sketch4" >Sketch4</button>
+    </div>
+    <div id="bg">
+      <div id="sketch"></div>
+    </div>
+    <script>
+	let myp5Sketch = new p5(sketch1,"sketch");    
+	let buttons = document.getElementsByTagName('button');
+		for (let i = 0, len = buttons.length; i < len; i++) {
+    			buttons[i].onclick = function () {
+				loadSketch (this);
+			}
+		}
+	function loadSketch (button) {
+		let sketchId = button.id;
+		switch (sketchId) {
+			case 'sketch1':
+				myp5Sketch.remove();
+				myp5Sketch = new p5(sketch1,"sketch");
+				break;
+			case 'sketch2':
+				myp5Sketch.remove();
+				myp5Sketch = new p5(sketch2,"sketch");
+				break;
+			case 'sketch3':
+				myp5Sketch.remove();
+				myp5Sketch = new p5(sketch1,"sketch");
+				break;
+			case 'sketch4':
+				myp5Sketch.remove();
+				myp5Sketch = new p5(sketch2,"sketch");
+				break;
+			default:
+				return false;
+		}
+	}
+    </script>	    
   </body>
 </html>
