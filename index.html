@@ -7,23 +7,25 @@
     <script src="sketches/sketch2.js"></script>
     <script src="sketches/bouncyballs.js"></script>
     <script src="sketches/rect.js"></script>
-    <script src="main.js"></script>
+    <script src="main.js" async></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div role="navigation" class="sidenav">
-      <div class="title">rnd.exe</div>
-      <button id="sketch1" onclick = "loadSketch(this)">test sketch number 1</button>
-      <button id="sketch2" onclick = "loadSketch(this)">here's another one</button>
-      <button id="sketch3" onclick = "loadSketch(this)">bouncy bounce</button>
-      <button id="sketch4" onclick = "loadSketch(this)">bootleg matrix</button>
-      <button id="sketch5" onclick = "loadSketch(this)">wannabe PaulSmith</button>
-    </div>
-    <div id="bg">
-      <div id="sketch"></div>
-    </div>
-    	    
+	<div role="navigation" class="sidenav">
+		<div id="menu" class="title">rnd.exe</div>
+		<div id="dropdown" class="open" >
+			<button id="sketch1" onclick = "loadSketch(this)">test sketch number 1</button>
+			<button id="sketch2" onclick = "loadSketch(this)">here's another one</button>
+			<button id="sketch3" onclick = "loadSketch(this)">bouncy bounce</button>
+			<button id="sketch4" onclick = "loadSketch(this)">bootleg matrix</button>
+			<button id="sketch5" onclick = "loadSketch(this)">wannabe PaulSmith</button>
+		</div>	
+	</div>
+	<div id="bg">
+		<div id="sketch"></div>
+	</div>
+    
   </body>
 </html>

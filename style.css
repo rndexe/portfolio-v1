@@ -9,24 +9,44 @@ html, body {
   min-width: 200px; /* Set the width of the sidebar */
   position : fixed;
   background: rgb(0,0,0,0); 
-  font-family: 'Source Code Pro', monospace;
   padding-left : 25px;
 }
 .sidenav .title {
   font-size : 40px;
   font-weight : 700;
+  color: white;
   background: rgb(0,0,0,0.25); 
   padding : 20px;
   margin : 15px 0px;
+  cursor: pointer;
+  border-radius: 5px;
+  display : inline-block;
 }
 .sidenav button {
   font-size : 14px;
   display : block;
   margin : 5px 0px;
+  font-family: 'Source Code Pro', monospace;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(0,0,0,0.5);
+}
+#dropdown {
+  position: relative;
+}	
+.open {
+  top : 0px;
+  transition : top 0.5s ease-in;
+}	
+.closed {
+  top : -100vh;
+  transition : top 0.5s ease-in;
 }	
 #bg {
   height : 100vh;
   display: flex;
+  background-color : black;
   justify-content: center;
   align-items: center;
 }

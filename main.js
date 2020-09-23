@@ -1,3 +1,17 @@
+const menuButton = document.getElementById("menu");
+const dropdown = document.getElementById("dropdown");
+
+menuButton.addEventListener('click', function() {
+	
+	let dropdownState = dropdown.className;
+	if (dropdownState === "closed") {
+        	dropdown.className = dropdown.className.replace("closed", "open");
+    	} else {
+        	dropdown.className = dropdown.className.replace("open", "closed");
+    	}
+});
+
+
 let currentSketch;
 function loadSketch (button) {
 	let sketchId = button.id;
