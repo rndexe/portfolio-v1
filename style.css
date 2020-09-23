@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 
 html, body {
   margin: 0;
@@ -6,20 +6,23 @@ html, body {
   overflow : hidden;
 }
 .sidenav {
-  width: 200px; /* Set the width of the sidebar */
+  min-width: 200px; /* Set the width of the sidebar */
   position : fixed;
   background: rgb(0,0,0,0); 
-  transition : width 0.5s;
-  overflow-x : hidden;
   font-family: 'Source Code Pro', monospace;
+  padding-left : 25px;
 }
 .sidenav .title {
-  font-size : 30px;
-  text-decoration : none;
+  font-size : 40px;
+  font-weight : 700;
+  background: rgb(0,0,0,0.25); 
+  padding : 20px;
+  margin : 15px 0px;
 }
 .sidenav button {
   font-size : 14px;
   display : block;
+  margin : 5px 0px;
 }	
 #bg {
   height : 100vh;
