@@ -2,7 +2,7 @@ const rect = (p) => {
   p.setup = setup;
   p.draw = draw;
   p.windowResized = windowResized;
-  let fullscreen = true;
+  p.fullscreenstate = true;
   function setup() {
     p.createCanvas(p.windowWidth, p.windowHeight);
     origWidth = p.windowWidth;
@@ -18,5 +18,5 @@ const rect = (p) => {
   }
   function windowResized() {
   	p.resizeCanvas(p.windowWidth, p.windowHeight);
-  }	  
+  }
 };
