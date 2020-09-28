@@ -50,6 +50,7 @@ canvas {
 .sidenav button {
   font-size : 1rem;
   display : block;
+  cursor: pointer;
   margin : 0.3em 0.3em 0.3em 0em;
   border: 0;
   color: #2AA198;
