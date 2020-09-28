@@ -34,7 +34,9 @@ html, body {
 }	
 
 #sketch {
-  z-index: 2;	
+  z-index: 2;
+  box-shadow: 0em 0em 1em 0.2em #060606;
+     
 }	
 
 canvas {
