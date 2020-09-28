@@ -5,13 +5,14 @@ html, body {
   margin: 0;
   padding: 0;
   overflow : hidden;
+  font-size: clamp(12px, 10.6px + 0.3846vw, 18px);
 }
 .sidenav {
   position : fixed;
   top: 10vh;
 }
 .sidenav button {
-  font-size : 1em;
+  font-size : 1rem;
   display : block;
   margin : 0.3em 0.3em 0.3em 0em;
   border: 0;
@@ -21,7 +22,7 @@ html, body {
   box-shadow: 0.1em 0.2em 0.2em black;
 }
 #menu button{
-  font-size : 1.2em;
+  font-size : 1.2rem;
   background-color: #586e75;
 }	
 #dropdown {
@@ -37,7 +38,7 @@ html, body {
   transition : transform 0.5s ease-in-out;
 }	
 .closed {
-  transform : translateX(-20vw);
+  transform : translateX(-50vw);
   transition : transform 0.5s ease-in-out;
 }	
 #bg {
