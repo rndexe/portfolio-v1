@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@100,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@100,300&display=swap');
 
 html, body {
   margin: 0;
@@ -7,28 +6,71 @@ html, body {
   overflow : hidden;
   font-size: clamp(12px, 10.6px + 0.3846vw, 18px);
 }
+
+#bg {
+  height : 100vh;
+  display: flex;
+  background-color : #121212;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+#title {
+  position: fixed;
+  bottom: -10vh;
+  right: -10vw;
+  font-size: 20rem;
+  color: #2AA198;	
+  transition: opacity 0.5s ease-in;
+  visibility: hidden; 
+  opacity: 0;
+  z-index: 1;
+}	
+
+#title.show{
+  visibility: visible; 
+  opacity: 0.25;
+}	
+
+#sketch {
+  z-index: 2;	
+}	
+
+canvas {
+  display: block;
+}
+
 .sidenav {
   position : fixed;
   top: 10vh;
+  z-index: 10;
 }
+
 .sidenav button {
   font-size : 1rem;
   display : block;
   margin : 0.3em 0.3em 0.3em 0em;
   border: 0;
-  color: #fafafa;
-  background-color: #073642;
+  color: #2AA198;
+  background-color: #212121;
   font-family: 'Inconsolata', monospace;
   box-shadow: 0.1em 0.2em 0.2em black;
 }
-#menu button{
+
+#menu {
   font-size : 1.2rem;
-  background-color: #586e75;
+  color: #268BD2;
 }	
+
 #dropdown {
   position: relative;
   overflow-y: auto;
 }
+.li {
+  font-size: 0.8rem;
+  color: #93A1A1;
+} 
 
 ::-webkit-scrollbar {
     display: none;
@@ -41,15 +83,3 @@ html, body {
   transform : translateX(-50vw);
   transition : transform 0.5s ease-in-out;
 }	
-#bg {
-  height : 100vh;
-  display: flex;
-  background-color : #121212;
-  justify-content: center;
-  align-items: center;
-}
-canvas {
-  display: block;
-}
-  
-

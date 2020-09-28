@@ -3,14 +3,18 @@ const menuButton = document.getElementById("menu");
 const dropdown = document.getElementById("dropdown");
 
 window.onresize = fitcanvas;
-
+setTimeout( function() {
+	document.getElementById("title").classList.add("show");
+},1000);
 menuButton.addEventListener('click', function() {
 	
 	let dropdownState = dropdown.className;
 	if (dropdownState === "closed") {
+        	menuButton.innerText = "< Menu";
         	dropdown.className = dropdown.className.replace("closed", "open");
     	} else {
-        	dropdown.className = dropdown.className.replace("open", "closed");
+        	menuButton.innerText = "> Menu";
+		dropdown.className = dropdown.className.replace("open", "closed");
     	}
 });
 
@@ -38,8 +42,9 @@ function chooseSketch (button) {
 }
 
 function loadSketch (newSketch) {
-	if(currentSketch !== undefined)
+	if(currentSketch !== undefined) {
 		currentSketch.remove();
+	}	
 	currentSketch = new p5(newSketch,"sketch");
 	fitcanvas();
 }	
