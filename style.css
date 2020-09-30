@@ -60,7 +60,6 @@ a {
 }	
 .sidenav {
   position : fixed;
-  top: 10vh;
   z-index: 10;
 }
 
@@ -81,6 +80,7 @@ button.blue {
 }	
 button#header {
   font-size : 2rem;
+  margin-bottom: 10vh;
 }  
 #dropdown {
   position: relative;
