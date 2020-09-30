@@ -38,7 +38,6 @@ const stars = (p) => {
 		}
 		p.endShape();
 		const rate = 0.01;
-		console.log(cam.eyeX + "," + cam.eyeY);
 		let newX = cam.eyeX + (tx - cam.eyeX)*rate;
 		let newY = cam.eyeY + (ty - cam.eyeY)*rate;
 		cam.camera( newX,newY,350, 0,0,0, 0,-1,0);
