@@ -4,6 +4,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow : hidden;
+  background-color : #121212;
   font-size: clamp(12px, 10.6px + 0.3846vw, 18px);
 }
 
@@ -20,7 +21,8 @@ html, body {
   position: fixed;
   bottom: -10vh;
   right: -10vw;
-  font-size: 20rem;
+  font-size: 10rem;
+  font-family: 'Inconsolata', monospace;
   color: #2AA198;	
   transition: opacity 0.5s ease-in;
   visibility: hidden; 
@@ -28,21 +30,34 @@ html, body {
   z-index: 1;
 }	
 
-#title.show{
-  visibility: visible; 
-  opacity: 0.25;
-}	
-
 #sketch {
   z-index: 2;
   box-shadow: 0em 0em 1em 0.2em #060606;
-     
+}	
+#bgsketch {
+  z-index: 1;
+  position:fixed;
+  transition: opacity 1s ease-in;
+  visibility: hidden; 
+  opacity: 0;
+}	
+
+#title.show{
+  visibility: visible; 
+  opacity: 1;
+}	
+#bgsketch.show{
+  visibility: visible; 
+  opacity: 1;
 }	
 
 canvas {
   display: block;
 }
-
+a {
+ text-decoration: none;
+ text-decoration-style: none;
+}	
 .sidenav {
   position : fixed;
   top: 10vh;
@@ -61,11 +76,12 @@ canvas {
   box-shadow: 0.1em 0.2em 0.2em black;
 }
 
-#menu {
-  font-size : 1.2rem;
+button.blue {
   color: #268BD2;
 }	
-
+button#header {
+  font-size : 2rem;
+}  
 #dropdown {
   position: relative;
   overflow-y: auto;

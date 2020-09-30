@@ -1,12 +1,13 @@
 let currentSketch;
-loadSketch(stars);
+bgSketch = new p5(stars,"bgsketch");
+
 const menuButton = document.getElementById("menu");
 const dropdown = document.getElementById("dropdown");
 
 window.onresize = fitcanvas;
 setTimeout( function() {
-	document.getElementById("title").classList.add("show");
-},1000);
+	document.getElementById("bgsketch").classList.add("show");
+},500);
 menuButton.addEventListener('click', function() {
 	
 	let dropdownState = dropdown.className;

@@ -9,7 +9,7 @@ const bouncyballs = (p) => {
 	p.draw = draw;
 	
 	function setup() {
-	  p.createCanvas(1000, 1000);
+	  p.createCanvas(600, 600);
 	  for (let i = 0; i < numBalls; i++) {
 	    balls[i] = new Ball(
 	      p.random(p.width),
