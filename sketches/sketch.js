@@ -3,7 +3,7 @@ const randomtext = (p) => {
 	p.draw = draw;	
 	p.preload = preload;
 	p.windowResized = windowResized;
-	let fullscreen = true;
+	p.fullscreenstate = true;
 	let font, fontsize = 18;
 	let brblack, bryellow;
 	let w, h;

@@ -1,4 +1,5 @@
 let currentSketch;
+loadSketch(stars);
 const menuButton = document.getElementById("menu");
 const dropdown = document.getElementById("dropdown");
 
@@ -36,6 +37,9 @@ function chooseSketch (button) {
 		case 'sketch5':
 			loadSketch(rect);
 			break;
+		case 'sketch6':
+			loadSketch(stars);
+			break;
 		default:
 			return false;
 	}
@@ -63,16 +67,16 @@ function fitcanvas() {
 	let newHeight = sketchHeight;
 	let newWidth = sketchWidth;
 	if ( sketchWidth > bgWidth ) {
-		newWidth = bgWidth;
+		newWidth = bgWidth-5;
 		newHeight = newWidth/ratio;
 	}	
 	if ( sketchHeight > bgHeight ) {
-		newHeight = bgHeight;
+		newHeight = bgHeight-5;
 		newWidth = newHeight*ratio;
 	}
 
 	if ( currentSketch.fullscreenstate == true) {
-		currentSketch.resizeCanvas(bgWidth,bgHeight);
+		currentSketch.resizeCanvas(bgWidth,bgHeight-2);
 	} else { 
 		currentSketch.resizeCanvas(newWidth,newHeight);	
 	}	
