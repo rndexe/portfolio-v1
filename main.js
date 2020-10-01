@@ -68,16 +68,16 @@ function fitcanvas() {
 	let newHeight = sketchHeight;
 	let newWidth = sketchWidth;
 	if ( sketchWidth > bgWidth ) {
-		newWidth = bgWidth-5;
+		newWidth = bgWidth;
 		newHeight = newWidth/ratio;
 	}	
 	if ( sketchHeight > bgHeight ) {
-		newHeight = bgHeight-5;
+		newHeight = bgHeight;
 		newWidth = newHeight*ratio;
 	}
 
 	if ( currentSketch.fullscreenstate == true) {
-		currentSketch.resizeCanvas(bgWidth,bgHeight-2);
+		currentSketch.resizeCanvas(bgWidth,bgHeight);
 	} else { 
 		currentSketch.resizeCanvas(newWidth,newHeight);	
 	}	
