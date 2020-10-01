@@ -18,13 +18,21 @@
   </head>
   <body>
 	<div role="navigation" class="sidenav">
-		<div >
+		<div class="header">
+			<div class="mainheader">
 			<a href="https://rndexe.github.io">
-			<button id="header" class="blue">rnd.exe</button>
+				<button>rnd.exe</button>
 			</a>
-			<button id="menu" class="blue">&lt; Menu</button>
+			</div>
+			<div class="subheader">
+				<button>About me</button>
+				<a href="https://instagram.com/rnd.exe" target="_blank">
+					<img src="assets/insta.png">
+				</a>
+			</div>
 		</div>
 		<div id="dropdown" class="open" >
+			<button id="menu" class="blue">&lt; Menu</button>
 			<button id="sketch1" onclick = "chooseSketch(this)">
 				<span class="li">1</span>
 				test sketch number 1
@@ -55,7 +63,6 @@
 	<div id="bg">
 		
 		<div id="bgsketch"></div>
-		<div id="title">rnd.exe</div>
 		<div id="sketch"></div>
 	</div>
     

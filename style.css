@@ -1,104 +1,115 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@100,300&display=swap');
 
 html, body {
-  margin: 0;
-  padding: 0;
-  overflow : hidden;
-  background-color : #121212;
-  font-size: clamp(12px, 10.6px + 0.3846vw, 18px);
+	margin: 0;
+	padding: 0;
+	overflow : hidden;
+	background-color : #121212;
+	font-size: clamp(12px, 10.6px + 0.3846vw, 18px);
 }
+
+canvas {
+	display: block;
+}
+a {
+	text-decoration: none;
+}	
 
 #bg {
-  height : 100vh;
-  display: flex;
-  background-color : #121212;
-  justify-content: center;
-  align-items: center;
-  z-index: -1;
+	height : 100vh;
+	display: flex;
+	background-color : #121212;
+	justify-content: center;
+	align-items: center;
+	z-index: -1;
 }
 
-#title {
-  position: fixed;
-  bottom: -10vh;
-  right: -10vw;
-  font-size: 10rem;
-  font-family: 'Inconsolata', monospace;
-  color: #2AA198;	
-  transition: opacity 0.5s ease-in;
-  visibility: hidden; 
-  opacity: 0;
-  z-index: 1;
+#bgsketch {
+	z-index: 1;
+	position:fixed;
+	transition: opacity 1s ease-in;
+	visibility: hidden; 
+	opacity: 0;
 }	
 
 #sketch {
-  z-index: 2;
-  box-shadow: 0em 0em 1em 0.2em #060606;
-}	
-#bgsketch {
-  z-index: 1;
-  position:fixed;
-  transition: opacity 1s ease-in;
-  visibility: hidden; 
-  opacity: 0;
+	z-index: 2;
+	box-shadow: 0em 0em 1em 0.2em #060606;
 }	
 
-#title.show{
-  visibility: visible; 
-  opacity: 1;
-}	
 #bgsketch.show{
-  visibility: visible; 
-  opacity: 1;
+	visibility: visible; 
+	opacity: 1;
 }	
 
-canvas {
-  display: block;
-}
-a {
- text-decoration: none;
- text-decoration-style: none;
-}	
 .sidenav {
-  position : fixed;
-  z-index: 10;
+	position : fixed;
+	z-index: 10;
 }
 
 .sidenav button {
-  font-size : 1rem;
-  display : block;
-  cursor: pointer;
-  margin : 0.3em 0.3em 0.3em 0em;
-  border: 0;
-  color: #2AA198;
-  background-color: #212121;
-  font-family: 'Inconsolata', monospace;
-  box-shadow: 0.1em 0.2em 0.2em black;
+	font-size : 1rem;
+	display : block;
+	cursor: pointer;
+	margin : 0.3em 0.3em 0.3em 0em;
+	border: 0;
+	color: #2AA198;
+	background-color: #212121;
+	font-family: 'Inconsolata', monospace;
+	box-shadow: 0.1em 0.2em 0.2em black;
 }
 
-button.blue {
-  color: #268BD2;
+.header {
+	margin-bottom : 5vh;
+	align-items: center;
 }	
-button#header {
-  font-size : 2rem;
-  margin-bottom: 10vh;
-}  
-#dropdown {
-  position: relative;
-  overflow-y: auto;
+.mainheader button {
+	font-size: 2.5rem;	
+	color: #268BD2;
+	margin-bottom: 0px;
+}	
+.subheader {
+	display: flex;
+	align-items: center;
+}	
+
+.subheader button {
+	color: #268BD2;
 }
+.subheader a {
+	padding: calc(1px + 0.134rem) 3px;
+	background-color: #212121;
+	box-shadow: 0.1em 0.2em 0.2em black;
+	margin : 0.3em 0.3em 0.3em 0em;
+}	
+.subheader img {
+	/*padding: 2px;*/
+	display: block;
+	height: 0.8rem;
+	vertical-align: baseline;
+}	
+button.blue {
+	color: #268BD2;
+}	
+
+#dropdown {
+	position: relative;
+	overflow-y: auto;
+}
+
 .li {
-  font-size: 0.8rem;
-  color: #93A1A1;
+	font-size: 0.8rem;
+	color: #93A1A1;
 } 
 
-::-webkit-scrollbar {
-    display: none;
-}
-
 .open {
-  transition : transform 0.5s ease-in-out;
+	transition : transform 0.5s ease-in-out;
 }	
 .closed {
-  transform : translateX(-50vw);
-  transition : transform 0.5s ease-in-out;
+	transform : translateX(-50vw);
+	transition : transform 0.5s ease-in-out;
 }	
+
+::-webkit-scrollbar {
+	display: none;
+}
