@@ -67,6 +67,7 @@ a {
 	font-size: 2.5rem;	
 	color: #268BD2;
 	margin-bottom: 0px;
+	box-shadow: 0.1em 0.1em 0.2em black;
 }	
 .subheader {
 	display: flex;
