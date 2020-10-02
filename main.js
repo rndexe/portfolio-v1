@@ -1,13 +1,11 @@
 let currentSketch;
-bgSketch = new p5(stars,"bgsketch");
-
 const menuButton = document.getElementById("menu");
 const dropdown = document.getElementById("dropdown");
-
+bgSketch = new p5(stars,"bgsketch");
 window.onresize = fitcanvas;
-setTimeout( function() {
-	document.getElementById("bgsketch").classList.add("show");
-},500);
+
+chooseSketchFromUrl();
+
 menuButton.addEventListener('click', function() {
 	
 	let dropdownState = dropdown.className;
@@ -22,29 +20,42 @@ menuButton.addEventListener('click', function() {
 
 function chooseSketch (button) {
 	let sketchId = button.id;
-	switch (sketchId) {
+	stringToSketch(sketchId);
+}
+
+function chooseSketchFromUrl() {
+	const currentUrl = new URL(window.location.href);
+	//console.log(currentUrl.hash);
+	if(currentUrl.hash !== "") {
+		let hashValue = currentUrl.hash.slice(1);
+		stringToSketch(hashValue);
+	}	
+}	
+
+function stringToSketch(string) {
+	switch (string) {
 		case 'sketch1':
 			loadSketch(sketch1);
 			break;
 		case 'sketch2':
 			loadSketch(sketch2);
 			break;
-		case 'sketch3':
+		case 'bouncyballs':
 			loadSketch(bouncyballs);
 			break;
-		case 'sketch4':
+		case 'randomtext':
 			loadSketch(randomtext);
 			break;
-		case 'sketch5':
+		case 'rect':
 			loadSketch(rect);
 			break;
-		case 'sketch6':
+		case 'stars':
 			loadSketch(stars);
 			break;
 		default:
 			return false;
 	}
-}
+}	
 
 function loadSketch (newSketch) {
 	if(currentSketch !== undefined) {
@@ -83,3 +94,7 @@ function fitcanvas() {
 	}	
 	
 }
+
+setTimeout( function() {
+	document.getElementById("bgsketch").classList.add("show");
+},250);
